@@ -8,12 +8,12 @@ namespace Sandbox
     class Worker : Employee
      {
        
-        public virtual string Skill { get; set; }
+        public virtual string skill { get; set; }
 
         public Worker(String name, int salaryPerMonth, string skill)
             : base (name, salaryPerMonth)
         {
-            this.Skill = skill;
+            this.skill = skill;
         }
 
       
