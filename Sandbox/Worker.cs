@@ -5,22 +5,18 @@ using System.Text;
 
 namespace Sandbox
 {
-    class Worker : Employee 
-    {
-        public virtual string WorkerSkill
-        {
-            get { return WorkerSkill; }
-            set { WorkerSkill = value; }
-        }
+    class Worker : Employee
+     {
+       
+        public virtual string Skill { get; set; }
 
-        public Worker(String name, int salaryPerMonth, string Workerskill)
+        public Worker(String name, int salaryPerMonth, string skill)
             : base (name, salaryPerMonth)
         {
-
+            this.Skill = skill;
         }
 
-        //bla bla bla 
-         
+      
 
     }
 }

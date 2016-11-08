@@ -9,6 +9,7 @@ namespace Sandbox
     {
         private String name;
         private int salaryPerMonth;
+        
 
         public Employee(String name, int salaryPerMonth)
         {
@@ -26,5 +27,7 @@ namespace Sandbox
         {
             return salaryPerMonth;
         }
+
+       
     }
 }
