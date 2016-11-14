@@ -16,17 +16,11 @@ namespace Sandbox
             this.skill = skill;
         }
 
-        public string Getskill()
+        public virtual string Getskill()
         {
             return skill;
         }
 
-        public void Setskill(string newskill)
-        {
-            skill = newskill;
-        }
-        
-      
 
     }
 }

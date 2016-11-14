@@ -7,23 +7,37 @@ namespace Sandbox
 {
     class Manager : Employee
     {
+        private int monthlyBonus;
+        
+        private int workinghours;
 
-       // public int MonthlyBonus { get; set; }
-        public int WorkingHours { get; set; }
-        public bool MonthlyBonus { get; set; }
 
-        public Manager(string name, int salaryPerMonth, int WorkingHours)
+        public Manager(string name, int salaryPerMonth, int workinghours )
             :base (name, salaryPerMonth)
         {
             
-           // this.MonthlyBonus = MonthlyBonus;
-            this.WorkingHours = WorkingHours; 
+           this.monthlyBonus = 4000;
+            
         }
 
         public virtual int GetWorkingHours()
         {
-            return WorkingHours;
+            return workinghours;
         }
+
+        public virtual int GetMonthlyBonus(int workinghours)
+        {
+            if(workinghours >= 180)
+            {
+              return base.GetSalaryPerMonth() + monthlyBonus;
+            }
+            return base.GetSalaryPerMonth();
+        }
+
+        public 
+
+
+
 
         //public override int GetSalaryPerMonth()
         //{
