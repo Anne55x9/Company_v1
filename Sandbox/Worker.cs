@@ -7,8 +7,8 @@ namespace Sandbox
 {
     class Worker : Employee
      {
-       
-        public virtual string skill { get; set; }
+
+        private string skill;
 
         public Worker(String name, int salaryPerMonth, string skill)
             : base (name, salaryPerMonth)
@@ -16,6 +16,16 @@ namespace Sandbox
             this.skill = skill;
         }
 
+        public string Getskill()
+        {
+            return skill;
+        }
+
+        public void Setskill(string newskill)
+        {
+            skill = newskill;
+        }
+        
       
 
     }

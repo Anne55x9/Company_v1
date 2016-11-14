@@ -23,29 +23,35 @@ namespace Sandbox
         public virtual int GetWorkingHours()
         {
             return WorkingHours;
-        } 
-
-        public virtual bool GetMonthlyBonus()
-        {
-            MonthlyBonus = false;
-            if(WorkingHours >= 18)
-            {
-                Console.WriteLine($"BoNus");
-                MonthlyBonus = true; 
-            }
-            return MonthlyBonus;
-
         }
+
+        //public override int GetSalaryPerMonth()
+        //{
+        //if()STATEMENT TILmonthlybonus
+        //    return base.GetSalaryPerMonth();
+        //}
+
+        //public virtual bool GetMonthlyBonus()
+        //{
+        //    MonthlyBonus = false;
+        //    if(WorkingHours >= 18)
+        //    {
+        //        Console.WriteLine($"Bonus er tildelt");
+        //        MonthlyBonus = true; 
+        //    }
+        //    return MonthlyBonus;
+
+        //}
 
         //public virtual int GetWorkingHours()
         //{
         //    WorkingHours = 0;
         //    if (WorkingHours >= 18)
         //    {
-                
+
         //    }
 
-            
+
 
         //}
         //public virtual int GetWorkingHours()

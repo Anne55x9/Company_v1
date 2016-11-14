@@ -24,7 +24,7 @@ namespace Sandbox
 
         //This method can be overriden in methods in classes
         public virtual int GetSalaryPerMonth()
-        {
+        { 
             return salaryPerMonth;
         }
 
