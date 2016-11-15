@@ -5,7 +5,15 @@ using System.Text;
 
 namespace Sandbox
 {
-    class Director
+    class Director : Manager
     {
+       
+  
+        public Director(string name, int salaryPerMonth) 
+            : base(name, salaryPerMonth, 20000)
+        {
+
+        }
+
     }
 }

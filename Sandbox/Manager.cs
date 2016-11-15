@@ -8,77 +8,33 @@ namespace Sandbox
     class Manager : Employee
     {
         private int monthlyBonus;
-        
-        private int workinghours;
+        private int whPerMonth;
 
 
-        public Manager(string name, int salaryPerMonth, int workinghours )
+        public Manager(string name, int salaryPerMonth, int monthlyBonus)
             :base (name, salaryPerMonth)
         {
-            
-           this.monthlyBonus = 4000;
-            
+            this.monthlyBonus = monthlyBonus;
+            whPerMonth = 0;
+
         }
 
-        public virtual int GetWorkingHours()
+        public void SetwhPerMonth(int whPerMonth)
         {
-            return workinghours;
+            this.whPerMonth = whPerMonth;
         }
 
-        public virtual int GetMonthlyBonus(int workinghours)
+        public override int GetSalaryPerMonth()
         {
-            if(workinghours >= 180)
+            int totalSalary = base.GetSalaryPerMonth();
+
+            if(whPerMonth > 180)
             {
-              return base.GetSalaryPerMonth() + monthlyBonus;
+                totalSalary = totalSalary + monthlyBonus;
             }
-            return base.GetSalaryPerMonth();
+
+            return totalSalary;
         }
-
-        public 
-
-
-
-
-        //public override int GetSalaryPerMonth()
-        //{
-        //if()STATEMENT TILmonthlybonus
-        //    return base.GetSalaryPerMonth();
-        //}
-
-        //public virtual bool GetMonthlyBonus()
-        //{
-        //    MonthlyBonus = false;
-        //    if(WorkingHours >= 18)
-        //    {
-        //        Console.WriteLine($"Bonus er tildelt");
-        //        MonthlyBonus = true; 
-        //    }
-        //    return MonthlyBonus;
-
-        //}
-
-        //public virtual int GetWorkingHours()
-        //{
-        //    WorkingHours = 0;
-        //    if (WorkingHours >= 18)
-        //    {
-
-        //    }
-
-
-
-        //}
-        //public virtual int GetWorkingHours()
-        //{
-        //    WorkingHours = 0;
-        //    if (WorkingHours >= 18)
-        //    {
-        //        return SetMonthlyBonus();
-        //    }
-        //    return WorkingHours;
-        //}
-        //bsbsh
-
 
     }
 }
